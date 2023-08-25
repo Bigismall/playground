@@ -1,0 +1,147 @@
+@import "reset";
+@import "mixins/bem";
+
+body {
+  height: 300vh;
+  overflow: scroll;
+  timeline-scope: --scale-progress;
+  padding-top: 10rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+@keyframes colorProgress {
+  50% {
+    background-color: coral;
+  }
+  100% {
+    background-color: crimson;
+  }
+}
+
+@keyframes scaleProgress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+
+  }
+}
+
+@keyframes scaleHeight {
+  0% {
+    height: 1rem;
+  }
+  100% {
+    height: 6rem;
+  }
+}
+
+@keyframes rotateProgress {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes clip {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.progress {
+  background-color: cornflowerblue;
+  height: 1rem;
+
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  transform-origin: 0 50%;
+
+  animation-timeline: scroll(root block);
+  animation-name: scaleProgress, colorProgress;
+  animation-duration: auto, auto;
+  animation-timing-function: linear, ease-in-out;
+
+}
+
+.size {
+  background-color: deepskyblue;
+  height: 1rem;
+
+  position: fixed;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  transform-origin: 0 50%;
+
+  animation-timeline: scroll(root block);
+  animation-name: scaleProgress, scaleHeight;
+  animation-duration: auto, auto;
+  animation-timing-function: linear, linear;
+  animation-iteration-count: 1, 4;
+  animation-direction: normal, alternate;
+}
+
+.step {
+  height: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform-origin: 0 50%;
+
+  background: linear-gradient(
+                  to right,
+                  red 20%,
+                  orange 0,
+                  orange 40%,
+                  yellow 0,
+                  yellow 60%,
+                  lime 0,
+                  lime 80%,
+                  green 0
+  );
+  animation: clip auto steps(5) forwards;
+  animation-timeline: scroll(root);
+}
+
+.progress-connected {
+  background-color: chartreuse;
+  height: 2rem;
+  width: 2rem;
+
+  position: fixed;
+  top: 10rem;
+  left: 50%;
+  transform-origin: center;
+
+  //animation-timeline: scroll(root block);
+  animation-name: rotateProgress, colorProgress;
+  animation-duration: auto, auto;
+  animation-timing-function: linear, ease-in-out;
+
+  animation-timeline: --scale-progress;
+}
+
+
+.scroller {
+  position: fixed;
+  top: 12rem;
+  left: calc(50% - 150px);
+  display: block;
+  width: 300px;
+  max-height: 300px;
+  overflow: scroll;
+  scroll-timeline: --scale-progress block;
+}

@@ -1,5 +1,17 @@
 @import "reset";
 
+body {
+  padding: 1rem 0 0 0;
+}
+
+.status {
+  margin: 0 auto 1rem auto;;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: cornflowerblue;
+}
+
 ul.navigation {
   margin: 0 auto;
   max-width: 50%;
