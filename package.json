@@ -6,11 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "biome format --write ./src"
   },
   "devDependencies": {
     "sass": "^1.77.6",
     "typescript": "^5.5.3",
     "vite": "^4.5.3"
+  },
+  "dependencies": {
+    "vite-plugin-biome": "^1.0.9"
   }
 }

@@ -1,6 +1,5 @@
-import './../styles/cube.scss'
+import './../styles/cube.scss';
 // import { $ } from './dom'
-
 
 // const $app = $('#app')!
 // $app.innerHTML = `Everything is ok in CUBE`;
