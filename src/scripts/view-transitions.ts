@@ -4,6 +4,7 @@ console.log('Everything is ok in View Transitions');
 
 const article = document.getElementsByTagName('article');
 const switchArticle = (e?: MouseEvent) => {
+  // @ts-ignore
   const hash = e?.target?.hash?.slice(1) || location?.hash?.slice(1);
 
   Array.from(article).forEach((a, i) => {
@@ -16,12 +17,15 @@ const switchArticle = (e?: MouseEvent) => {
 };
 
 document.body.addEventListener('click', (e) => {
+  // @ts-ignore
   if (!e?.target?.hash) return;
 
+  // @ts-ignore
   if (!document.startViewTransition) {
     switchArticle(e);
     return;
   }
+  // @ts-ignore
   document.startViewTransition(() => switchArticle(e));
 });
 
