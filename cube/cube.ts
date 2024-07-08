@@ -1,4 +1,4 @@
-import './../styles/cube.scss';
+import './cube.scss';
 // import { $ } from './dom'
 
 // const $app = $('#app')!
