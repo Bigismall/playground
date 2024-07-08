@@ -4,9 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
     <title>Popover API</title>
 </head>
 <body>
+<div id="app">
+    <nav class="grid">
+        <button popovertarget="first-popover" type="button">Toggle the popover</button>
+        <button popovertarget="first-popover" type="button" popovertargetaction="show">
+            Show popover
+        </button>
+        <button popovertarget="first-popover" type="button" popovertargetaction="hide">
+            Hide popover
+        </button>
+        <button type="button" id="popover-toggle">
+            JS Toggle popover
+        </button>
+        <button type="button" id="popover-show">
+            JS Show popover
+        </button>
+        <button type="button" id="popover-hide">
+            JS Hide popover
+        </button>
+    </nav>
+    <div id="first-popover" popover="auto">
+        <h1>Popover tile</h1>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+            tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+            semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+            tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+            semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    </div>
 
+    <h1>Protect chances ease shores plenty Grubbs swept.</h1>
+    <p>The dark fire will not avail you, flame of Udun! Markings eyes triumph keepsakes hurts maggot Erebor fume doubt
+        cross-country pull check. Played importance birdses Paladin rebuild mirror ranges whatever swish.</p>
+    <h2>Cooking screams Gondor's blunt tie remuneration metals searching.</h2>
+    <p>Decent Dragon-Slayer birthright pointy sheep? And what about very old friends? Crop Garulf finding tried material
+        counter flavor wretch pretending breath detour! Iáve shattered shieldmaiden amusing?</p>
+    <h3>Unwise center fortunate Concerning Hobbits require moves.</h3>
+    <p>Kingly counted crows handsome her knowledge Sackville-Bagginses. Otherwise hard-won happen git Gundabad content
+        forgotten. You cannot hide. I see you. There is no life in the void. Only death.</p>
+    <ul>
+        <li>Valar.</li>
+        <li>Bofur!</li>
+        <li>Radagast the Brown.</li>
+        <li>Gaffer's.</li>
+        <li>Dwarves.</li>
+    </ul>
+    <ul>
+        <li>Rabbit Barad-dûr so reign sideways southern.</li>
+        <li>Command risk found member ever-watchful Lobelia Sackville-Baggins retake.</li>
+        <li>Hanging did volley Frodo Baggins although cater summoned!</li>
+        <li>Rebuild Peregrin talisman telling ostler company flattery niece seasoning.</li>
+        <li>Suspects Gibbets glow settle mightiest fence push.</li>
+    </ul>
+    <h3>Coward dabbling light's slightest Gondor broke.</h3>
+    <p>Reclaiming destroying bet shadows Sounds immediately multiplied center sires. Flank skin-changers Legolas dry
+        hundred outer. May the blessings of Elves and Men and all Free Folk go with you.</p>
+    <ol>
+        <li>Noldorin.</li>
+        <li>Ringwraiths.</li>
+        <li>Dwarf-lords!</li>
+        <li>Théoden's?</li>
+        <li>Gandalf's?</li>
+    </ol>
+    <ol>
+        <li>Dry Rhudaur sorrow servants who's?</li>
+        <li>Boots escort racket reaction altogether Concerning Hobbits children's?</li>
+        <li>Dozens Oin griping guide breeze.</li>
+        <li>Facial off rings recognizes ourselves brown Denethor management trumpets shines.</li>
+        <li>Adjusted grilled Dori stronger prolonging stole.</li>
+    </ol>
+    <h3>Safer describe hunters spare cunning Sam frailty.</h3>
+    <p>Clothes kindly laughing instance Beren pays wisp cliff there'd? I will take the Ring to Mordor. Owed wounded
+        Kingsfoil far recover wins left interesting bellows mind follows light. Acorn attached spent Orthanc.</p>
+    <table>
+        <thead>
+        <tr>
+            <th></th>
+            <th>Employment</th>
+            <th>Wise</th>
+            <th>Challenge</th>
+            <th>Trouble'll</th>
+            <th>Course</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Dunghill</td>
+            <td>pledge</td>
+            <td>still</td>
+            <td>elsewhere</td>
+            <td>armory</td>
+            <td>twilight</td>
+        </tr>
+        <tr>
+            <td>One-fourteenth</td>
+            <td>people's</td>
+            <td>bitter</td>
+            <td>guest</td>
+            <td>torment</td>
+            <td>cat</td>
+        </tr>
+        <tr>
+            <td>Sack</td>
+            <td>dogs</td>
+            <td>infected</td>
+            <td>fates</td>
+            <td>different</td>
+            <td>sudden</td>
+        </tr>
+        <tr>
+            <td>Earth</td>
+            <td>gates</td>
+            <td>liable</td>
+            <td>footsteps</td>
+            <td>regrouping</td>
+            <td>stroke</td>
+        </tr>
+        <tr>
+            <td>Slumbers</td>
+            <td>detour</td>
+            <td>boy</td>
+            <td>pint</td>
+            <td>coming</td>
+            <td>breather</td>
+        </tr>
+        <tr>
+            <td>Greedily</td>
+            <td>ain't</td>
+            <td>visitors</td>
+            <td>moon</td>
+            <td>bearer</td>
+            <td>ashes</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>sung</td>
+            <td>beasts</td>
+            <td>deserve</td>
+            <td>rallying</td>
+            <td>disturber</td>
+            <td>sprinkle</td>
+        </tr>
+        </tfoot>
+    </table>
+    <h4>Gems renown disease loves sorcerer maids Bracegirdle.</h4>
+    <p>Altogether Thofin smelling. Friendship forsaking appear stage mother's Farthing fires flies rider thread shall
+        unlost. Lasted witless rule blowing people and ease bigger liar sweet Sam. The dark fire will not avail you,
+        flame of Udun!</p>
+    <blockquote>
+        <p>There is one Dwarf yet in Moria who still draws breath.</p>
+        <footer>—Bofur, <cite>slunk squeal leads emerald</cite></footer>
+    </blockquote>
+    <h5>Eorlingas escapes enjoy gongs way desecrate watching.</h5>
+    <p>Half-wits expenses Haradrim head-on walks appears govern nameless ride tapestry? Let the Ring-bearer decide.
+        Coneys coins spears die pony terms runt music Captain. Isn't struck Osgiliath fought.</p>
+    <pre>Looked expecting hungers Witch-king hmm! True read saw Luin? Riven Westfarthing princeling might.</pre>
+    <h6>Dark thoughts gear lied Esgaroth landlord kitchen far?</h6>
+    <p>Thror farmer actually <em>entrusted finds</em> talks. Sorrow crown
+        <mark>covers reaches feeling morbid</mark>
+        invite Fellowship towers. Eärendil terms needed <var>holidays</var>? <sub>Remuneration</sub> pot Hardly
+        nonetheless? Rides <strong>shatter disturb fabled malt</strong> forming Dol? <a>Andros</a> fifth master's
+        grilled treacherous. Window lot <cite>imaginable keen brewing</cite> Minas Morgul om. Reads <dfn>clothing
+            pursued outskirts doomed</dfn> Riddermark best. Road
+        <time>doors</time>
+        Rhudaur curtain. Tend <abbr>ask</abbr> Braga stage. Sweet-taking mongrel reached dagger <kbd>R</kbd> Helm's
+        Deep. Gloin <small>cozy rooms cater</small> yammer foreseen wolf rods? Tools splash
+        <del>reinforcements luckiest canniest</del>
+        apple Aragorn belonged. <q>Riddermark Toby Hornblowers</q> ax hang e-nGilith. Bilbo trimming weather fulfilled
+        <code>listening stew</code>! Infested
+        <ins>lurking there'd wider excuse</ins>
+        antique Aragorn. Distinct story middle Durin faces <samp>foes bay fume tied</samp>. Favorite pathway shows leave
+        <sup>Beorn</sup>.
+    </p>
+    <hr>
+    <dl>
+        <dt>Sun</dt>
+        <dd>Shouldn't southern rascal full Balin fence lanterns mash counted soldiers.</dd>
+        <dt>Whilst</dt>
+        <dd>You palantir blades shaken illusion falls God dear.</dd>
+        <dd>Teeming fortify close Shire's paid tweens past prizewinners?</dd>
+        <dt>Tracers</dt>
+        <dd>Doubting appear sowing protuberance volley Envenom paths sharpened?</dd>
+        <dd>Drawing mirrors squeaking hasty sleep last dreamt Gloin center.</dd>
+        <dd>Wealth weak grasp birthday respectable dinner Precious lever bereft cellars.</dd>
+    </dl>
+
+</div>
+<script type="module" src="/src/scripts/popover.ts"></script>
 </body>
 </html>
