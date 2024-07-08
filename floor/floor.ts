@@ -1,4 +1,4 @@
-import './../styles/floor.scss';
+import './floor.scss';
 
 let speed = 10;
 let turn = 0;

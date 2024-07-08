@@ -2,21 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>CSS PAD</title>
+    <style>
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            vertical-align: baseline;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            text-size-adjust: none;
+        }
+
+        html {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        footer, header, nav, section, main {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+            color: black;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        body {
+            padding: 1rem 0 0 0;
+        }
+
+        .status {
+            margin: 0 auto 1rem auto;;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: normal;
+            color: cornflowerblue;
+        }
+
+        ul.navigation {
+            margin: 0 auto;
+            max-width: 50%;
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: block;
+                margin: 1rem;
+                padding: 0;
+                background-color: cadetblue;
+                color: #fff;
+
+                a {
+                    display: block;
+                    padding: 1rem;
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: #fff;
+                        background-color: cornflowerblue;
+                    }
+                }
+            }
+        }
+
+
+    </style>
 </head>
 <body>
-<div id="app"></div>
 <ul class="navigation">
     <li><a href="cube/">Cube</a></li>
-    <li><a href="scroll-progress-animations.html">Scroll progress animations</a></li>
-    <li><a href="view-progress-animations.html">View progress animations</a></li>
-    <li><a href="view-transitions.html">View transitions</a></li>
-    <li><a href="view-transitions-gallery.html">View transitions gallery example</a></li>
-    <li><a href="floor.html">Floor</a></li>
-    <li><a href="gemini.html">Google Chrome Gemini AI API</a></li>
-    <li><a href="popover.html">Popover API</a></li>
+    <li><a href="scrollprogressanimation/">Scroll progress animations</a></li>
+    <li><a href="viewprogressanimations/">View progress animations</a></li>
+    <li><a href="viewtransitions/">View transitions</a></li>
+    <li><a href="viewtransitionsgallery/">View transitions gallery example</a></li>
+    <li><a href="floor/">Floor</a></li>
+    <li><a href="gemini/">Google Chrome Gemini AI API</a></li>
+    <li><a href="popover/">Popover API</a></li>
 </ul>
-<script type="module" src="/src/scripts/index.ts"></script>
 </body>
 </html>

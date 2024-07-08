@@ -7,6 +7,12 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <title>Gemini API</title>
+    <style>
+        textarea {
+            min-height: 20rem;
+        }
+
+    </style>
 </head>
 <body id="app" class="container">
 <main class="grid">
@@ -18,6 +24,6 @@
         <textarea id="output" readonly></textarea>
     </div>
 </main>
-<script type="module" src="/src/scripts/gemini.ts"></script>
+<script type="module" src="/gemini/gemini.ts"></script>
 </body>
 </html>

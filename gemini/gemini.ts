@@ -1,5 +1,4 @@
-import './../styles/gemini.scss';
-import { $ } from './dom';
+import { $ } from '../src/scripts/dom';
 
 document.addEventListener('DOMContentLoaded', async () => {
   // @ts-ignore

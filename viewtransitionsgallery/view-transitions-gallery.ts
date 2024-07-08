@@ -1,4 +1,4 @@
-import './../styles/view-transitions-gallery.scss';
+import './view-transitions-gallery.scss';
 
 console.log('Everything is ok in View Transitions Gallery');
 const cdnURL = 'https://cdn.glitch.global/de7f29c8-57eb-4eb1-81b5-4e0d8565ade5';

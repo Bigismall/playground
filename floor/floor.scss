@@ -1,5 +1,5 @@
-@import "reset";
-@import "mixins/bem";
+@import "../src/styles/reset";
+@import "../src/styles/mixins/bem";
 
 :root {
   --speed: 5s;
@@ -54,7 +54,7 @@ body {
   -webkit-mask-position: center;
   -webkit-mask-image: radial-gradient(closest-side, black 65%, transparent);
 
-  background: green url("images/grass.jpg") repeat-y top center;
+  background: green url("../images/grass.jpg") repeat-y top center;
   background-size: 1200px 1200px;
   display: grid;
   place-items: center;

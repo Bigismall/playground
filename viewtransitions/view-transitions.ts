@@ -1,4 +1,4 @@
-import './../styles/view-transitions.scss';
+import './view-transitions.scss';
 
 console.log('Everything is ok in View Transitions');
 

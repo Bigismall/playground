@@ -1,5 +1,5 @@
-import './../styles/popover.scss';
-import { $ } from './dom';
+import './popover.scss';
+import { $ } from '../src/scripts/dom';
 
 const popover = $('#first-popover') as HTMLDivElement;
 const popoverToggle = $('#popover-toggle') as HTMLButtonElement;
