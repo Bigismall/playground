@@ -17,21 +17,24 @@ document.addEventListener('DOMContentLoaded', async () => {
   const input = $('#input') as HTMLTextAreaElement;
   const output = $('#output') as HTMLTextAreaElement;
   const form = $('#form') as HTMLFormElement;
+  const submit = $('#submit') as HTMLButtonElement;
 
   const defaults = await AI.defaultTextSessionOptions();
   const session = await AI.createTextSession({
-    temperature: 0.6,
+    temperature: 0.5,
     topK: defaults.topK,
   });
-  console.log(session);
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
-    console.log(input.value);
-    const response = await session.prompt(input.value);
-    input.value = '';
+    submit.disabled = true;
+    const response = await session.promptStreaming(input.value);
+
+    for await (const chunk of response) {
+      output.value = chunk;
+    }
+
+    submit.disabled = false;
     input.focus();
-    console.log(response);
-    output.value = response;
   });
 });
