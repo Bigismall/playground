@@ -2,7 +2,7 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import biomePlugin from 'vite-plugin-biome';
 
-export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
+export default defineConfig(({ command, mode }) => {
   return {
     build: {
       rollupOptions: {
@@ -20,7 +20,7 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
         },
       },
     },
-    base: command === 'build' ? '/csspad/' : '/',
+    base: command === 'build' ? '/playground/' : '/',
     plugins: [
       biomePlugin({
         mode: 'check',
