@@ -1,0 +1,78 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 10rem auto 0 auto;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.anchor{
+    cursor: move;
+    font-size: 6rem;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 10rem;
+    height: 10rem;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 50%;
+    anchor-name: --anchor-one;
+}
+
+.balloon {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+
+    background-color: darkseagreen;
+
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    position-anchor: --anchor-one;
+}
+
+.balloon:nth-child(1) {
+    bottom: anchor(--anchor-one top);
+    right: anchor(--anchor-one left);
+}
+.balloon:nth-child(2) {
+    inset-area: top center;
+}
+
+.balloon:nth-child(3) {
+    bottom: anchor(--anchor-one top);
+    left: anchor(--anchor-one right);
+}
+.balloon:nth-child(4) {    inset-area: right;}
+.balloon:nth-child(5) {
+    top: anchor(--anchor-one bottom);
+    left: anchor(--anchor-one right);
+
+}
+.balloon:nth-child(6) {    inset-area: bottom;}
+.balloon:nth-child(7) {
+    top: anchor(--anchor-one bottom);
+    right: anchor(--anchor-one left);
+
+}
+.balloon:nth-child(8) {    inset-area: left;}
+
+
+

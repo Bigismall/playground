@@ -8,6 +8,7 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
       rollupOptions: {
         input: {
           main: resolve(__dirname, 'index.html'),
+          anchor: resolve(__dirname, '/anchor/index.html'),
           cube: resolve(__dirname, '/cube/index.html'),
           floor: resolve(__dirname, '/floor/index.html'),
           gemini: resolve(__dirname, '/gemini/index.html'),
