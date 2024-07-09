@@ -1,18 +1,57 @@
+/* etc */
+:root {
+    --padding: 1rem;
+}
+
 html {
     font-size: 16px;
 }
 
 body {
-    margin: 10rem auto 0 auto;
+    margin:  0;
     padding: 0;
     font-family: 'Arial', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
-    background-color: #f4f4f4;
-    width: 50vw;
-    height: 50vh;
+    display: grid;
+    place-items: center;
+    height: 100dvh;
+
+
+}
+
+.container {
+    display: block;
+    width: 80dvw;
+    height: 80dvh;
+    overflow: visible;
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid darkmagenta;
+
+}
+
+@keyframes move {
+    0% {
+        top: 0;
+        left: 50%;
+    }
+    25% {
+        top: 50%;
+        left: 100%;
+    }
+    50% {
+        top: 100%;
+        left: 50%;
+    }
+    75% {
+        top: 50%;
+        left: -10%;
+    }
+    100% {
+        top: 0;
+        left: 50%;
+    }
+
 }
 
 .anchor{
@@ -21,7 +60,7 @@ body {
     display: grid;
     place-items: center;
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
 
     width: 10rem;
@@ -30,7 +69,11 @@ body {
     color: white;
     border-radius: 50%;
     anchor-name: --anchor-one;
+    animation: move 8s infinite ease-in-out;
 }
+/* Make keyframe animation of anchor element.  animate it from the top to the bottom */
+
+
 
 .balloon {
     display: grid;
@@ -46,33 +89,50 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
     position-anchor: --anchor-one;
+    position-try-options: flip-inline, flip-block;
+    opacity: 0.7;
+    /*transition: all 0.1s;*/
 }
 
 .balloon:nth-child(1) {
     bottom: anchor(--anchor-one top);
     right: anchor(--anchor-one left);
+
+    background-color: tomato;
 }
 .balloon:nth-child(2) {
     inset-area: top center;
+background-color: darkorange;
 }
 
 .balloon:nth-child(3) {
     bottom: anchor(--anchor-one top);
     left: anchor(--anchor-one right);
+    background-color: gold;
 }
-.balloon:nth-child(4) {    inset-area: right;}
+.balloon:nth-child(4) {
+    inset-area: right;
+    background-color: lightseagreen;
+}
 .balloon:nth-child(5) {
     top: anchor(--anchor-one bottom);
     left: anchor(--anchor-one right);
-
+    background-color: lightblue;
 }
-.balloon:nth-child(6) {    inset-area: bottom;}
+.balloon:nth-child(6) {
+    inset-area: bottom;
+    background-color: mediumorchid;
+}
 .balloon:nth-child(7) {
     top: anchor(--anchor-one bottom);
     right: anchor(--anchor-one left);
+    background-color: mediumseagreen;
 
 }
-.balloon:nth-child(8) {    inset-area: left;}
+.balloon:nth-child(8) {
+    inset-area: left;
+    background-color: mediumslateblue;
+}
 
 
 
